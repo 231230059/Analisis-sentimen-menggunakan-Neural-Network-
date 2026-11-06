@@ -54,7 +54,7 @@ def label_sentiment(text):
 # -----------------------------------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r'D:\Analisis sentimen menggunakan Neural Network\tweet_data_kebakaran_hutan.csv')
+    df = pd.read_csv('tweet_data_kebakaran_hutan.csv')
     df['clean_text'] = df['full_text'].apply(clean_text)
     df['sentimen'] = df['clean_text'].apply(label_sentiment)
     return df
